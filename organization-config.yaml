@@ -2,6 +2,8 @@ enable: true
 organizationalUnits:
   - name: Security
   - name: Infrastructure
+  - name: SDLC
+  - name: SharedServices
 serviceControlPolicies: []
 taggingPolicies: []
 backupPolicies: []
