@@ -1,0 +1,47 @@
+defaultVpc:
+  delete: false
+  excludeAccounts: []
+transitGateways: []
+transitGatewayPeering: []
+endpointPolicies: []
+vpcs: []
+vpcFlowLogs:
+  trafficType: ALL
+  maxAggregationInterval: 600
+  destinations:
+    - s3
+    - cloud-watch-logs
+  destinationsConfig:
+    s3:
+      lifecycleRules: []
+    cloudWatchLogs:
+      retentionInDays: 3653
+  defaultFormat: false
+  customFields:
+    - version
+    - account-id
+    - interface-id
+    - srcaddr
+    - dstaddr
+    - srcport
+    - dstport
+    - protocol
+    - packets
+    - bytes
+    - start
+    - end
+    - action
+    - log-status
+    - vpc-id
+    - subnet-id
+    - instance-id
+    - tcp-flags
+    - type
+    - pkt-srcaddr
+    - pkt-dstaddr
+    - region
+    - az-id
+    - pkt-src-aws-service
+    - pkt-dst-aws-service
+    - flow-direction
+    - traffic-path
