@@ -20,4 +20,16 @@ mandatoryAccounts:
       key does not need to match the AWS account name.
     email: chazalf+alz-noct-audit@amazon.com
     organizationalUnit: Security
-workloadAccounts: []
+workloadAccounts:
+  - name: CICD
+    description: The account hosting all the CI/CD tools
+    email: chazalf+alz-noct-cicd@amazon.com
+    organizationalUnit: SharedServices
+  # - name: Dev
+  #   description: The account hosting dev workloads
+  #   email: chazalf+alz-noct-dev@amazon.com
+  #   organizationalUnit: SDLC
+  # - name: Prod
+  #   description: The account hosting dev workloads
+  #   email: chazalf+alz-noct-prod@amazon.com
+  #   organizationalUnit: SDLC
