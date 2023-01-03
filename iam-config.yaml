@@ -25,59 +25,9 @@ identityCenter:
         awsManaged:
           - arn:aws:iam::aws:policy/AdministratorAccess
       sessionDuration: 60
-    - name: DeveloperAccess
-      policies:
-        awsManaged:
-          - arn:aws:iam::aws:policy/PowerUserAccess
-        customerManaged:
-          - DeveloperAccessIAMPolicy
-      sessionDuration: 60
-    - name: DevOpsAccess
-      policies:
-        awsManaged:
-          - arn:aws:iam::aws:policy/AWSCloudFormationFullAccess
-          - arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess
-          - arn:aws:iam::aws:policy/AWSCodePipelineFullAccess
-          - arn:aws:iam::aws:policy/AmazonS3FullAccess
-          - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
-          - arn:aws:iam::aws:policy/SecretsManagerReadWrite
-        customerManaged:
-          - DevOpsAccessIAMPolicy
-      sessionDuration: 60
-    - name: ApproverAccess
-      policies:
-        awsManaged:
-          - arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess
-      sessionDuration: 60
-    - name: ViewOnlyAccess
-      policies:
-        awsManaged:
-          - arn:aws:iam::aws:policy/ViewOnlyAccess
-      sessionDuration: 60
   identityCenterAssignments:
-    # - name: DevDev
-    #   permissionSetName: DeveloperAccess
-    #   principalId: 'abcd1234-1001-70f0-9c12-56a6aa967ca4'
-    #   principalType: GROUP
-    #   deploymentTargets:
-    #     accounts:
-    #       - Dev
-    # - name: DevProd
-    #   permissionSetName: ViewOnlyAccess
-    #   principalId: '1234abcd-1001-70f0-9c12-56a6aa967ca4'
-    #   principalType: GROUP
-    #   deploymentTargets:
-    #     organizationalUnits:
-    #       - Prod
     - name: DevOps
-      permissionSetName: DevOpsAccess
-      principalId: '1234abcd-1001-70f0-9c12-56a6aa967ca4'
-      principalType: GROUP
-      deploymentTargets:
-        organizationalUnits:
-          - SharedServices
-    - name: Approvers
-      permissionSetName: ApproverAccess
+      permissionSetName: AdministratorAccess
       principalId: '1234abcd-1001-70f0-9c12-56a6aa967ca4'
       principalType: GROUP
       deploymentTargets:
