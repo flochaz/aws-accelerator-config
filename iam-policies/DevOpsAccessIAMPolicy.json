@@ -1,0 +1,34 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Action": [
+              "iam:CreateRole",
+              "iam:DeleteRole",
+              "iam:GetRole",
+              "iam:PassRole",
+              "iam:AttachRolePolicy",
+              "iam:DetachRolePolicy",
+              "iam:PutRolePolicy",
+              "iam:GetRolePolicy",
+              "iam:DeleteRolepolicy",
+              "kms:CreateKey",
+              "kms:PutKeyPolicy",
+              "kms:DescribeKey",
+              "kms:CreateAlias",
+              "kms:DeleteAlias",
+              "kms:ScheduleKeyDeletion",
+              "organizations:ListAccounts"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+      },
+      {
+          "Action": [
+              "sts:AssumeRole"
+          ],
+          "Effect": "Allow",
+          "Resource": "arn:aws:iam::*:role/cdk*"
+      }
+  ]
+}
