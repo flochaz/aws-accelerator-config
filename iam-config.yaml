@@ -28,7 +28,7 @@ identityCenter:
   identityCenterAssignments:
     - name: DevOps
       permissionSetName: AdministratorAccess
-      principalId: '1234abcd-1001-70f0-9c12-56a6aa967ca4'
+      principalId: '02b5b4e4-f021-703f-93bf-b4add1b86c87'
       principalType: GROUP
       deploymentTargets:
         organizationalUnits:
