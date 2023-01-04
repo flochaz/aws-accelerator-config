@@ -36,3 +36,10 @@ identityCenter:
       deploymentTargets:
         organizationalUnits:
           - SharedServices
+    - name: UserAssignmentTest
+      permissionSetName: AdministratorAccess
+      principalId: 'e2359414-a011-7044-f3b5-4831b2d06e22'
+      principalType: USER
+      deploymentTargets:
+        organizationalUnits:
+          - Security
