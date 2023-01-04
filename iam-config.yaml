@@ -25,10 +25,13 @@ identityCenter:
         awsManaged:
           - arn:aws:iam::aws:policy/AdministratorAccess
       sessionDuration: 60
+  identityCenterGroups:
+    - name: DevOps
+      description: DevOps group
   identityCenterAssignments:
     - name: DevOps
       permissionSetName: AdministratorAccess
-      principalId: '02b5b4e4-f021-703f-93bf-b4add1b86c87'
+      principalName: DevOps
       principalType: GROUP
       deploymentTargets:
         organizationalUnits:
