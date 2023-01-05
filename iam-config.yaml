@@ -71,7 +71,7 @@ identityCenter:
       principalName: Developers
       principalType: GROUP
       deploymentTargets:
-        organizationalUnits:
+        accounts:
           - Prod
     - name: DevOps
       permissionSetName: DevOpsAccess
