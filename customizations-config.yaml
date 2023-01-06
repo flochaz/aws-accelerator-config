@@ -1,0 +1,29 @@
+customizations:
+  cloudFormationStacks:
+    - deploymentTargets:
+        organizationalUnits:
+          - SDLC
+      description: Project A - Auto CDK bootstrap stack
+      name: ProjectA-CDK-Bootstrap
+      regions:
+        - us-east-1
+      runOrder: 1
+      template: aws-accelerator-config/bootstap-templates/cdk-bootstrap-template-v14.yml
+      parameters:
+        - name: TrustedAccounts
+          value: '["257633838593"]'
+        - name: Qualifier
+          value: ProjectA
+    - deploymentTargets:
+        accounts:
+          - CICD
+      description: Project A - Auto CDK bootstrap stack
+      name: ProjectA-CDK-Bootstrap
+      regions:
+        - us-east-1
+      runOrder: 1
+      template: aws-accelerator-config/bootstap-templates/cdk-bootstrap-template-v14.yml
+      parameters:
+        - name: Qualifier
+          value: ProjectA
+      terminationProtection: false
