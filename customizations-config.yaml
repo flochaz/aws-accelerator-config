@@ -6,7 +6,7 @@ customizations:
       description: Project A - Auto CDK bootstrap stack
       name: ProjectA-CDK-Bootstrap
       regions:
-        - us-east-1
+        - eu-west-1
       runOrder: 1
       template: bootstap-templates/cdk-bootstrap-template-v14.yml
       terminationProtection: false
@@ -21,7 +21,7 @@ customizations:
       description: Project A - CICD - Auto CDK bootstrap stack
       name: ProjectA-CICD-CDK-Bootstrap
       regions:
-        - us-east-1
+        - eu-west-1
       runOrder: 1
       terminationProtection: false
       template: bootstap-templates/cdk-bootstrap-template-v14.yml
