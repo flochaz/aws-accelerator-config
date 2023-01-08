@@ -29,8 +29,8 @@ identityCenter:
       policies:
         awsManaged:
           - arn:aws:iam::aws:policy/PowerUserAccess
-        customerManaged:
-          - DeveloperAccessIAMPolicy
+        # customerManaged:
+        #   - DeveloperAccessIAMPolicy
       sessionDuration: 60
     # - name: DevOpsAccess
     #   policies:
