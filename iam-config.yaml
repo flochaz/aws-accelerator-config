@@ -32,28 +32,28 @@ identityCenter:
         customerManaged:
           - DeveloperAccessIAMPolicy
       sessionDuration: 60
-    - name: DevOpsAccess
-      policies:
-        awsManaged:
-          - arn:aws:iam::aws:policy/AWSCloudFormationFullAccess
-          - arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess
-          - arn:aws:iam::aws:policy/AWSCodePipelineFullAccess
-          - arn:aws:iam::aws:policy/AmazonS3FullAccess
-          - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
-          - arn:aws:iam::aws:policy/SecretsManagerReadWrite
-        customerManaged:
-          - DevOpsAccessIAMPolicy
-      sessionDuration: 60
-    - name: ApproverAccess
-      policies:
-        awsManaged:
-          - arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess
-      sessionDuration: 60
-    - name: ViewOnlyAccess
-      policies:
-        awsManaged:
-          - arn:aws:iam::aws:policy/ViewOnlyAccess
-      sessionDuration: 60
+    # - name: DevOpsAccess
+    #   policies:
+    #     awsManaged:
+    #       - arn:aws:iam::aws:policy/AWSCloudFormationFullAccess
+    #       - arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess
+    #       - arn:aws:iam::aws:policy/AWSCodePipelineFullAccess
+    #       - arn:aws:iam::aws:policy/AmazonS3FullAccess
+    #       - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
+    #       - arn:aws:iam::aws:policy/SecretsManagerReadWrite
+    #     customerManaged:
+    #       - DevOpsAccessIAMPolicy
+    #   sessionDuration: 60
+    # - name: ApproverAccess
+    #   policies:
+    #     awsManaged:
+    #       - arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess
+    #   sessionDuration: 60
+    # - name: ViewOnlyAccess
+    #   policies:
+    #     awsManaged:
+    #       - arn:aws:iam::aws:policy/ViewOnlyAccess
+    #   sessionDuration: 60
   identityCenterGroups:
     - name: Developers
     - name: DevOpsEngineers
@@ -66,24 +66,24 @@ identityCenter:
       deploymentTargets:
         accounts:
           - Dev
-    - name: DevProd
-      permissionSetName: ViewOnlyAccess
-      principalName: Developers
-      principalType: GROUP
-      deploymentTargets:
-        accounts:
-          - Prod
-    - name: DevOps
-      permissionSetName: DevOpsAccess
-      principalName: DevOpsEngineers
-      principalType: GROUP
-      deploymentTargets:
-        organizationalUnits:
-          - SharedServices
-    - name: Approvers
-      permissionSetName: ApproverAccess
-      principalName: Approvers
-      principalType: GROUP
-      deploymentTargets:
-        organizationalUnits:
-          - SharedServices
+    # - name: DevProd
+    #   permissionSetName: ViewOnlyAccess
+    #   principalName: Developers
+    #   principalType: GROUP
+    #   deploymentTargets:
+    #     accounts:
+    #       - Prod
+    # - name: DevOps
+    #   permissionSetName: DevOpsAccess
+    #   principalName: DevOpsEngineers
+    #   principalType: GROUP
+    #   deploymentTargets:
+    #     organizationalUnits:
+    #       - SharedServices
+    # - name: Approvers
+    #   permissionSetName: ApproverAccess
+    #   principalName: Approvers
+    #   principalType: GROUP
+    #   deploymentTargets:
+    #     organizationalUnits:
+    #       - SharedServices
