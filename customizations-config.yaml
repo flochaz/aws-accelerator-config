@@ -9,6 +9,7 @@ customizations:
         - us-east-1
       runOrder: 1
       template: aws-accelerator-config/bootstap-templates/cdk-bootstrap-template-v14.yml
+      terminationProtection: false
       parameters:
         - name: TrustedAccounts
           value: '["257633838593"]'
@@ -22,8 +23,8 @@ customizations:
       regions:
         - us-east-1
       runOrder: 1
+      terminationProtection: false
       template: aws-accelerator-config/bootstap-templates/cdk-bootstrap-template-v14.yml
       parameters:
         - name: Qualifier
           value: ProjectA
-      terminationProtection: false
