@@ -32,15 +32,15 @@ identityCenter:
         # customerManaged:
         #   - DeveloperAccessIAMPolicy
       sessionDuration: 60
-    - name: DevOpsAccess
-      policies:
-        awsManaged:
-          - arn:aws:iam::aws:policy/AWSCloudFormationFullAccess
-          - arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess
-          - arn:aws:iam::aws:policy/AWSCodePipelineFullAccess
-          - arn:aws:iam::aws:policy/AmazonS3FullAccess
-          - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
-          - arn:aws:iam::aws:policy/SecretsManagerReadWrite
+    # - name: DevOpsAccess
+    #   policies:
+    #     awsManaged:
+    #       - arn:aws:iam::aws:policy/AWSCloudFormationFullAccess
+    #       - arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess
+    #       - arn:aws:iam::aws:policy/AWSCodePipelineFullAccess
+    #       - arn:aws:iam::aws:policy/AmazonS3FullAccess
+    #       - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
+    #       - arn:aws:iam::aws:policy/SecretsManagerReadWrite
         # customerManaged:
         #   - DevOpsAccessIAMPolicy
       sessionDuration: 60
@@ -73,13 +73,13 @@ identityCenter:
       deploymentTargets:
         accounts:
           - Prod
-    - name: DevOps
-      permissionSetName: DevOpsAccess
-      principalName: DevOpsEngineers
-      principalType: GROUP
-      deploymentTargets:
-        organizationalUnits:
-          - SharedServices
+    # - name: DevOps
+    #   permissionSetName: DevOpsAccess
+    #   principalName: DevOpsEngineers
+    #   principalType: GROUP
+    #   deploymentTargets:
+    #     organizationalUnits:
+    #       - SharedServices
     - name: Approvers
       permissionSetName: ApproverAccess
       principalName: Approvers
