@@ -12,7 +12,7 @@ customizations:
       terminationProtection: false
       parameters:
         - name: TrustedAccounts
-          value: '["257633838593"]'
+          value: "257633838593"
         - name: Qualifier
           value: ProjectA
     - deploymentTargets:
