@@ -18,8 +18,8 @@ customizations:
     - deploymentTargets:
         accounts:
           - CICD
-      description: Project A - Auto CDK bootstrap stack
-      name: ProjectA-CDK-Bootstrap
+      description: Project A - CICD - Auto CDK bootstrap stack
+      name: ProjectA-CICD-CDK-Bootstrap
       regions:
         - us-east-1
       runOrder: 1
